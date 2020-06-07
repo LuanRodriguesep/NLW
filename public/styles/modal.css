@@ -1,0 +1,96 @@
+#modal{
+    background-color: #0e0a14ef; /* Dica : quando a cor esta em hexadecimal, podemos usar as tecnicas alpha para trasnparencia, e so adicionar mais duas letras ou numero que vai de 0 ate F, FF é o mais fort, 00 a cor fica neutralizado, ou seja nao aparece */
+
+    height: 100vh;
+    width: 100vw;
+
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 400ms; /* Tempo em que os efeitos aparecerão*/ 
+}
+#modal.hide { /*Não estou procurando a classe hide dentro do modal, eu estou afirmando apontando diretamene para ela, a hide*/
+    
+    display: none; /*No javascript será configurado quando esse model ira ou nao aparecer*/    
+
+}
+
+#modal .content {
+    color: white;
+
+    width: 420px;
+
+}
+
+#modal .header {
+    display: flex; /*ficará um item  ao lado do outro*/
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 48px;
+
+}
+
+#modal .header a {
+    background-image: url("../icones/x.svg");
+
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+
+    font-size: 0.01px;
+}
+
+#modal .header h1 {
+    color: white;
+
+    font-size: 36px;
+    line-height: 42px;
+}
+
+#modal form label {
+    font-size: 14px;
+    line-height: 16px;
+
+    display: block; /*para fazer o espaçamento entre o texto e o campo de busca*/ 
+    margin-bottom: 8px;
+}
+
+#modal form .field {
+    display: flex;
+}
+
+#modal form input {
+    flex: 1; /* preenche todo campo disponivel */
+
+    background-color: var(--input-color);
+
+    border-radius: 8px 0px 0px 8px; /*ordem de sentido horaria começando pelo lado superior esquerdo*/
+    border: 0;    
+
+    padding: 16px 24px;
+
+    font-size: 16px;
+
+    color: #6c6c80;
+}
+
+#modal form button {
+    width: 72px;
+    height: 72px;
+
+    background-color: var(--primary-color);
+
+    border: 0;
+    border-radius: 0px 8px 8px 0px; /*ordem de sentido horaria começando pelo lado superior esquerdo*/
+
+}
+
+#modal form button:hover { /*verificar conceitos de hover, porem aqui ele permiti que , quando o usuario passar o mouse o background do botão mudará de cor*/ 
+    background-color: #2fb85e;
+}

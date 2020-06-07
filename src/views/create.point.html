@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"> <!--Aceita caracter especias como tios e cedilha-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Nossa pagina cabe em telas de diversos tamanhos-->
+    <title>Criar um ponto de coleta </title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+     <!--Foi adicionado e acoplado uma nova Roboto e a fonte Ubuntu, economizando linhas e chamadas ao site do google, apos o 'E' comercial (&) tem os detalhes -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/create-point.css">
+    <link rel="stylesheet" href="/styles/responsive.css">
+</head>
+<body>
+    <div id="page-create-point">
+
+    
+        
+        <header>
+            <a href="/"><img src="/icones/logo.svg" alt="Logomarca"></a> <!--alt ajuda deficientes visuais , como programas leitores de paginas-->
+            <a href="/">
+                <span></span>
+                Voltar para home
+            </a>
+        </header>
+        <form action="">
+            <h1>Cadastro do Ponto de Coleta</h1>
+            
+            <fieldset><!--comando que organiza campos e elementos de um formulario-->
+                <legend>
+                    <h2>Dados da entidade</h2>
+                </legend>
+
+                <div class="field">
+
+                    <label for="name">Nome da entidade</label>
+                    <input type="text" name="name" required>
+
+                </div>
+
+                <div class="field-group">
+                    <div class="field">
+                        <label for="address">Endereço</label>
+                        <input type="text" name="address" required>
+                    </div>
+                    
+                    <div class="field">
+                        <label for="address2">Numero/Complemento</label>
+                        <input type="text" name="address2" required>
+                    </div>
+                </div>
+
+
+
+
+                <div class="field-group">
+                    
+                    <div class="field">
+                        <label for="state">Estado</label>
+                        <select name="uf" required>
+                            <option value="">Selecione o Estado</option>
+                        </select>
+                        <input type="hidden" name="state" required>
+                    </div>
+                    
+                    <div class="field">
+                        <label for="city">Cidade</label>
+                        <select name="city" disabled  required> <!--o diseble tira a opção de selecionar uma opção no campo cidade, usando o javascript iremos habilita-lo so depois que selecionar o e escolher o campo estado, antes disso n funcionará-->
+                            <option value="">Selecione a Cidade</option>
+                            
+                        </select>
+                    </div>
+
+                </div>
+                
+
+            </fieldset>
+
+            <fieldset>
+                <legend>
+                    <h2>Itens de Coletas</h2>
+                </legend>
+                <div class="items-grid" >
+                    <li data-id="1"> <!--<li> fazer listas-->
+                        <img src="/icones/lampadas.svg" alt="Lampadas">
+                        <span>Lampadas</span>
+                    </li>
+                    
+                    <li data-id="2"> <!--<li> fazer listas-->
+                        <img src="/icones/baterias.svg" alt="Pilhas e Baterias">
+                        <span>Pilhas e Baterias</span>
+                    </li>
+
+                    <li data-id="3"> <!--<li> fazer listas-->
+                        <img src="/icones/papeis-papelao.svg" alt="Papeis e Papelão">
+                        <span>Papeis e Papelão</span>
+                    </li>
+
+                    <li data-id="4"> <!--<li> fazer listas-->
+                        <img src="/icones/eletronicos.svg" alt="Residuos Eletronicos">
+                        <span>Residuos Eletronicos</span>
+                    </li>
+
+                    <li data-id="5"> <!--<li> fazer listas-->
+                        <img src="/icones/organicos.svg" alt="Residuos Organicos">
+                        <span>Residuos Organicos</span>
+                    </li>
+
+                    <li data-id="6"> <!--<li> fazer listas-->
+                        <img src="/icones/oleo.svg" alt="Oleo de Cozinha">
+                        <span>Oleo de Cozinha</span>
+                    </li>
+                </div>
+            
+                <input type="hidden" name="items">
+            
+            </fieldset>
+
+
+            <button type="submit"> Cadastrar Ponto de Coleta </button> <!--Cria um botão de enviar formularios-->
+        </form>
+    </div>
+
+    <script src="/script/create-point.js"></script>
+</body>
+</html>

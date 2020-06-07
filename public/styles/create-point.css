@@ -1,0 +1,176 @@
+#page-create-point {
+    width: 90%; /*largura normal é 90px*/
+    max-width: 1100px;/*max de largura é 1100px, nao passará disso*/
+        
+    margin: 0 auto;/* top e rodape seja zeroa mas as laterais sejam preenchidas automaticamente *//*alinhamento de caixa (pelo lado de fora)*/
+}
+#page-create-point header {
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between; /*cria espacos entre itens*/
+    align-items: center; /*vai alinhas os itens no eixo X */
+}
+#page-create-point header a {
+    color: var(--title-color); /*Vai puxar a cor injetada na variavel titlecolor que configuramos no arquivo home*/
+    font-weight: bold; /*deixa a fonte em negrito*/ 
+    display: flex;
+    align-items: center;
+}
+#page-create-point header a span {
+    margin-right: 16px;
+    background-image: url(../icones/arrow-left.svg); /*para a imagem funcionar assim como em outros arquivos temos que definir largura e altura*/
+    
+    display: flex;
+
+    width: 20px;
+    height: 24px;
+}
+form{
+    background-color: white;
+    
+    margin-top: 80px;/*fez o espacamento entre o top da caixa form ao resto da pagina*/
+    padding: 64px; /*aumenta o tamanho da caixa form, faz um preenchimento*/
+
+    border-radius: 8px; /*arredonda os cantos das paginas*/
+
+    max-width: 730px;
+}
+form h1{
+    font-size: 36px;/*aumenta o tamanho da fonte*/
+}
+
+form fieldset {
+    margin-top: 64px;/*cria espaçamento no top*/
+
+    border: 0; /*vai tirar a borda lateral do fieldset*/
+}
+
+form legend {
+    margin-bottom: 40px;/*vai criar uma separação*/
+
+}
+
+form legend h2 {
+    font-size: 24px;/*tamanho*/
+}
+
+form .field {   
+    flex: 1; /*para que todos os elementos preencha estique todo espaço flex deve ser colocado o flex 1;*/
+    
+    display: flex; /*fica um elemento ao lado do outro*/ 
+    flex-direction: column; /*estica os elementos dentro da caixa , em coluna */
+
+    margin-bottom: 24px; /*  */
+}
+
+form .field-group {
+    display: flex; /* O flex ,deixa um item ao lado do outro unidimencional, ou fica um ao lado do outro ou um embaixo do outro*/ 
+
+}
+form input, /*quando colocamos a virgula , nos apontamos as config para tag select tbm*/
+form select {
+    background-color: #f0f0f5;
+
+    border: 0;
+    padding: 16px 24px; /**/ 
+    font-size: 16px; /*aumenta a fonte*/
+
+    border-radius: 8px; /*arredonda as bordas*/
+    
+    
+    /* outline: none; *//* fica como none , pois quando selecione o campo faz uma borda em volta do campo*/
+
+}
+form select {
+    -webkit-appearance: none; /*reseta as config do chrome - campos select em alguns navegadores teem algumas config padrões que podem atrapalhar a estilização que pretendemos inserir como por exemplo as setas que veem como padrão*/
+    -moz-appearance: none;/*reseta as config do mozila - campos select em alguns navegadores teem algumas config padrões que podem atrapalhar a estilização que pretendemos inserir, como por exemplo as setas que veem como padrão*/
+    appearance: none;/*reseta as config do navegadores - idem*/
+}
+form label {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+form .field-group .field + .field { /* selecionamos um campo especifico , mesmo eles estando um ao lado do outro, o sinal de + nos direciona para um segundo campo */
+    margin-left: 24px; /*cria um distanciamento enre um campo com relação a outro*/
+}
+form button {
+    width: 260px; /*largura*/ 
+    height: 56px; /*altura*/
+
+    background-color: var(--primary-color); /*cor de fundo ,o var chama a variavel com o valor da cor que ja haviamos definido */
+    border-radius: 8px; /*arredonda as pontas*/ 
+
+    color: white; /**/
+    font-weight: bold; /*especie de um negrito*/
+    font-size: 16px; /*aumenta o tamanho da letra*/
+
+    border: 0; /*vai zerar as boras do campo botão*/
+
+    margin-top: 40px; /*vai criar um distanciamento do topo*/
+
+    transition-duration: 400ms; /* determinamos um tempo para ter uma mudança quando selecionamos ou passamos o mouse, vai haver alguma alteração visual no botão*/
+}
+
+form button:hover {
+    background-color: #2fb86e;
+}
+
+.items-grid{
+    display: grid; /*  Grid é multidimensional  consigo criaar linhas e colunas */
+    /*grid-template-columns: 200px 200px 200px; /*signifa que eu tenho tre colunas de 200 pixels*/
+    grid-template-columns: 1fr 1fr 1fr;/*configuramos por fração, o proprio CSS vai calcular um jeito de ajusta essas 3 colunas na caixa*/
+    gap: 16px; /*para dar espaçamento entre os itens, poderiamos ter usado o margin, mas o gap fica melhor no grid*/
+}
+.items-grid li {
+    background-color: #f5f5f5;
+    list-style: none; /*tira os pontinhos pretos dos estilos de listas padrões*/
+    border: 2px solid #f5f5f5;
+    border-radius: 8px;
+    height: 180px;
+
+    padding: 32px 24px 16px;
+
+    display: flex;
+    flex-direction: column; /*A direção por padrão do flex é em sentido linha(horizontal), com esse comando ele muda para sentido coluna (vertical)*/
+
+    align-items: center;
+    justify-content: space-between;
+
+    text-align: center; /*alinha o texto*/
+
+    cursor: pointer; /*acontece algo ao clicar*/ 
+}
+.items-grid li span {
+    margin-top: 12px; /*distanciar os textos das imagens na parte do topo*/
+    
+    flex: 1; /*preenche o campo automaticamente*/
+
+    display: flex;
+    align-items: center;
+
+    color: var(--title-color);
+}
+
+.items-grid li.selected { /* com o pontinho sem espaço entre ele e as palavras significa:  Procure dentro o de <items-grid> o <li> que tenha a classe ="selected" /// com espço vc diz que tem dentro de li algum selected sem especificar*/
+    background-color: #e1faec;
+    border: 2px solid #34cb79;
+} 
+
+.items-grid li img,
+.items-grid li span {
+    pointer-events: none; /*quando clicar vai ter alguma mudança, exceto na imagem e no texto de span que estão dentro do<li>*/
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
