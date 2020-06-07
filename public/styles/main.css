@@ -1,0 +1,33 @@
+:root{
+    --title-color:#322153; /*Cria uma variavel na raiz com um atributo cor , e toda vez que chamar essa variavel, a cor da font altera para o valor da variavel*/
+    --primary-color:#34cb79;
+    --input-color:#f0f0f5;
+}
+*{ /*comando para definir qual quer configuração, para todos itens, como forma universal, o asterisco é como uma palavra chave para todos (itens)*/
+    margin: 0; /*zeramos todos os espaços de todos os itens deste arquivo, muitos espaços ja vem como padrão do navegador e pode influenciar no designer da page*/
+    padding: 0;/*zeramos todos os espaços de todos os itens deste arquivo, muitos espaços ja vem como padrão do navegador e pode influenciar no designer da page*/
+    box-sizing: border-box; /*deixa exatamente o tamanho que vc define de largura e altura, pois o padding altera o tamnho mesmo que vc delimite por comando width*/
+}
+html{
+    font-family: 'Roboto' sans-serif;
+    }
+    body{
+        background: #f0f0f5;
+        -webkit-font-smoothing: antialiased;
+    }
+    a{
+        text-decoration: none;
+    }
+    h1,h2,h3,h4,h5,h6{
+        font-family: 'Ubuntu', sans-serif;
+        color: var(--title-color);
+    }
+/*Box Model
+Modelo de caixa
+toda caixa tem 
+largura, altura, espaçamento, preenchimentos ,
+bordas, cor,  fundo,  maneira, que é vista pelo html(display)
+posicionamento, alinhamento
+*/
+
+        

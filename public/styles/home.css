@@ -1,0 +1,97 @@
+#page-home {
+    height: 100vh; /*parecido com o valor de porcentagem, fica dinamico e se adequa ao conteudo*/
+    background: url('../icones/home-background.svg') no-repeat; /* nao será repetido esse background caso fosse abreviado o comando background sem o '-url:'   /*Busca uma imagem para ser adicionada no background via url*/
+    background-position: 35vw bottom; /* configuração de largura que no caso uma config de 35 e deslocará a imagem para ficar grudada la no  bottom (rodape)*/
+
+}
+#page-home .content{
+    width: 90%; /*Largura em porcentagem o intem se adequa a tela ja como px (pixel) ele fica fixo , como por exemplo 900px se usarmos nesse intem*/
+    max-width: 1100px; /*Defino o maximo que eu quero que o intem se mova */
+    height: 100%; /*altura de 100%*/
+    
+    /*margin-left: auto;
+    margin-right: auto;   /* Voce defini automaticamente o espaçamento do canto da tela */ 
+    
+    margin: 0 auto; /*Define o espaçamento nos 4 cantos da tela top, botton(rodape) e os cantos direito e esquerdo, quando é inserido o zero como primeiro parametro, o topo e o rodapé e ignorado , ou seja, o primeiro valor é para topo e rodape , o segundo para os cantos, ou pensar como o funcionamento de um relogio, topo , direito baixo e esquerdo */
+    display: flex;
+    height: 100%;
+    flex-direction: column; /*Felex continua dinamico porem ordena em colunas*/
+}
+#page-home header{
+    margin-top: 48px;
+    display: flex;
+    align-items: center; /*Centraliza os intens da tag header*/
+    justify-content: space-between; /* inseri um espaço entre os intens */
+}
+#page-home header a{
+    display: flex;
+
+    color: var(--title-color); /*chamada da variavel, definida na raiz(root:)*/
+    font-weight: 700;
+    
+}
+#page-home header a span{
+    margin-right: 16px;
+    display: flex;
+    background-image: url('../icones/log-in.svg'); /* nao precisamos usar o no repeat como na div#home-page, pois usamos o 'background-image:'; */
+    width: 20px;
+    height: 20px;
+}
+#page-home main {
+    max-width: 560px;
+    
+    flex: 1; /*preenche automaticamente todo espaço que ele tiver*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*Justificando o conteudo a box main , dando um espaçamento porpocional entre o conteudo o top e ao bottom(rodape)*/
+
+
+
+}
+#page-home main h1{
+    font-size: 54px;
+    
+    }
+#page-home main p{
+    font-size: 24px;
+    line-height: 38px; /*altura de linha*/
+    margin-top: 24px;/*distanciamento e altura do top*/
+}
+#page-home main a{
+    width: 100%;/*largura do botão*/
+    max-width: 360px;/*maximo da largura do botão*/
+    height: 72px ;/*Altura do botão*/
+    border-radius: 8px;/*arredonda as bordas*/
+    display: flex;
+    align-items: center;/*Alinha ao centro*/
+    margin-top: 40px;
+    background:var(--primary-color);
+    transition: 400ms; /*Duração de transmissão de estilizacao, nesse caso a mudança de cor ao passar ao mouse*/
+    font-weight: bold; /*peso (negrito)*/
+    
+}
+#page-home main a:hover{ /*houver faz um estilização especial, especifica*/
+    background-color: #2fb86e;
+}
+#page-home main a span{
+    width: 72px;/*largura*/
+    height: 72px;/*altura*/
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color:rgba(0,0,0,0.08); /*vai deixa uma parte do botão mais escura, mesmo quando passo o mouse mantem escurecido a parte determinada*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page-home main a span::after{ /*pseudo elemento, como se criasse uma div dentro da tag span , na qual podemos escrever strings e adicionar imagens e background*/
+    content: "";
+    background-image: url(../icones/search.svg);
+    width: 20px ;/*largura*/
+    height: 20px;/*altura*/
+    
+}
+#page-home main a strong{
+    flex: 1; /*preenche toda caixa , sem o flex 1 , so preenche ate o tamanho da frase*/
+    color: white;
+    text-align: center;
+}

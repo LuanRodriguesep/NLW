@@ -1,0 +1,40 @@
+@media(max-width: 900px){ /*vamos criar conjuntos de regras, de 900px pra baixo ate 0px, se ficar menos que 900px essas config a seguir serão consideradas*/
+    #page-home{
+        background-position-x:70vw; /*o conteudo se ficar abaixo dos 900 px determinado , sumirá,e será jogado de lado , mas apenas se ficar abaixo de 900px */  
+    }
+    #page-home .content{
+        align-items: center;
+        text-align: center;
+    }
+    #page-home header a {
+        position: absolute; /*como se colocasse uma folha sobre a outra */
+        bottom: 48px;/*será jogado para o rodape para nao ficar encavalado*/
+        left: 50%;/*vai jogar 50 px pro lado left*/
+        transform: translateX(-50%);/*faz achar um ponto medio e ficar ao maximo centralizado*/
+    }
+
+    #page-search-results .cards{
+        grid-template-columns: 1fr;
+    }
+    #page-search-results .cards img {
+        height: 250px;
+    }
+
+
+
+
+    #page-home main{
+        align-items: center; /*o bloco main inteiro ficou centralizado*/ 
+    }
+}
+@media (min-width: 1700px){ /*De 1700 px pra cima será aplicado essas regras abaixo, nos lembra um pouco o if else*/
+    #page-home {
+        background-position-x:40vw ; /*Quando o position for X estamos falando do eixo largura */
+    
+    }
+}
+@media(max-height: 760px){/*se a pagina ficar com menos de 760 px , as regras a seguir passará a valer */
+    #page-home{
+        background-position-y: 200px ; /* Quando position for Y estamos falando do eixo altura, neste caso a iamgem ficará fixa , apos atingir a condição de ficar menor que 760px */
+    }
+}

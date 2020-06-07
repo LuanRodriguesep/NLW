@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"> <!--Aceita caracter especias como tios e cedilha-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Nossa pagina cabe em telas de diversos tamanhos-->
+    <title>Ecoleta</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+     <!--Foi adicionado e acoplado uma nova Roboto e a fonte Ubuntu, economizando linhas e chamadas ao site do google, apos o 'E' comercial (&) tem os detalhes -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/modal.css">
+    
+    <!--Importante deixar os arquivos de responsividade por ultimo, pois assim ele nao será subescrito-->
+    <link rel="stylesheet" href="/styles/responsive.css"> 
+
+</head>
+<body>
+    <div id="page-home">
+
+    
+        <div class="content">
+            <header>
+                <a href="/"><img src="/icones/logo.svg" alt="Logomarca"></a> <!--alt ajuda deficientes visuais , como programas leitores de paginas-->
+                <a href="/create.point">
+                    <span></span>
+                    Cadastre um ponto de coleta
+                </a>
+            </header>
+                <main>
+                    <h1>Seu Marketplace de coleta  de residuos</h1>
+
+                    <p>Ajudamos pessoas a encontrarem  pontos  de coletas de forma  eficiente .</p>
+                    <a href="#"><span></span><strong> Pesquisar pontos de coleta</strong></a>
+                    <button></button>
+                </main>
+            </div>
+        </div>
+
+        <div id="modal" class="hide">
+            <div class="content">
+                <div class="header">
+                    <h1>Pontos de Coleta</h1>
+                    <a href="#">Fechar</a>
+                </div>
+                <form action="/search-results">
+                    <label for="search">Cidade</label>
+                    <div class="search field">
+                        <input type="text" name="search" placeholder="Pesquise por Cidade">
+                        <button>
+                            <img src="/icones/search.svg" alt="Buscar">
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    <script src="/script/index.js"></script>
+</body>
+</html>
