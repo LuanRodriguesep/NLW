@@ -94,3 +94,16 @@
 #modal form button:hover { /*verificar conceitos de hover, porem aqui ele permiti que , quando o usuario passar o mouse o background do botão mudará de cor*/ 
     background-color: #2fb85e;
 }
+
+/* Isto é para o modal point created */
+
+#modal.point .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modal.point h1 {
+    color: white;
+    margin-top: 32px;
+}

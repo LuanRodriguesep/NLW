@@ -9,6 +9,9 @@ const db = require("./database/db") // variavel nao preqisava propriamente ser "
 // queremos que esta pasta fique como uma pasta comum, como se o conteudo estivesse disponivel na web
 server.use(express.static("public"))
 
+//  Habilitar o uso do req.body em nossa aplicação
+server.use(express.urlencoded({extended:true})) // comando para habilitar o (req.body)
+
 
 
 //configurar pas publica 
@@ -45,7 +48,7 @@ server.get("/search-results", function (req, res){
 // Configuração pós nunjucks
 
 server.get("/", function (req, res) {
-    return res.render("index.html", { title: "Seu marketplace de coletas de residuos" }) 
+    return res.render("index.html", { title: "Seu marketplace de coletas de residuos" })
 })
 
 
@@ -54,8 +57,54 @@ server.get("/", function (req, res) {
 server.get("/create.point", function (req, res) {
     //req.query pegar informações de um formulário : Query strings da nossa Url
     console.log(req.query)
-    
+
     return res.render("create.point.html")
+})
+
+server.post("/savepoint", (req, res) => { // metodo post ---  configurando url
+    //req.body : o corpo do nosso formulario
+    console.log(req.body)
+
+    // Inserir dados no banco de dados
+
+    
+    const query = `
+    INSERT INTO places (
+        image, 
+        name,
+        address,
+        address2,
+        state,
+        city,
+        items 
+    ) VALUES (?,?,?,?,?,?,?);
+`
+
+    const values = [
+        req.body.image,
+        req.body.name,
+        req.body.address,
+        req.body.address2,
+        req.body.state,
+        req.body.city,
+        req.body.items
+    ]
+
+    function afterInsertData(err) {
+        if (err) {
+            console.log(err)
+            return res.send("Erro no Cadastro!")
+        }
+
+        console.log("cadastrados com Sucesso")
+        console.log(this)
+
+        return res.render("create.point.html", {saved:true })
+    }
+
+    db.run(query, values, afterInsertData)  // callback (chamar de volta)
+   
+    
 })
 
 
@@ -73,9 +122,9 @@ server.get("/search-results", function (req, res) {
         console.log("Aqui está seus registros") // consolo.log nos mostrar informações dos rows no terminal, deixa-lo aqui é opcional
         console.log(rows)
         // Mostrar a pagina html com os do banco de dados
-        return res.render("search-results.html",{ places: rows, total: total})
+        return res.render("search-results.html", { places: rows, total: total })
     })
-    
+
 })
 
 //ligar o servidor 
