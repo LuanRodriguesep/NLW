@@ -112,8 +112,17 @@ server.post("/savepoint", (req, res) => { // metodo post ---  configurando url
 
 server.get("/search-results", function (req, res) {
 
+
+    const search = req.query.search
+    if(search == ""){
+        // pesquisa vazia
+        return res.render("search-results.html", { total: 0})
+    }
+
+
+
     // ?Pegar o dados do banco de Dados
-    db.all(` SELECT * FROM places`, function (err, rows) {
+    db.all(` SELECT * FROM places WHERE city LIKE '%${search}%'`, function (err, rows) { // LIKE e as %(porcentagens) deixa a pesquisa no banco mais flexivel , ouseja qualquer nome que tenha o minimo de relaçao já será considerado,  como por exemplo as palavras Rio, sul e etc ... 
         if (err) {
             return console.log(err)
         }
