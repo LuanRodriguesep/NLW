@@ -17,7 +17,11 @@
     height: 100%;
     flex-direction: column; /*Felex continua dinamico porem ordena em colunas*/
 }
+<<<<<<< HEAD
 #page-home .content header{
+=======
+#page-home header{
+>>>>>>> master
     margin-top: 48px;
     display: flex;
     align-items: center; /*Centraliza os intens da tag header*/
@@ -35,7 +39,11 @@
     display: flex;
     background-image: url('../icones/log-in.svg'); /* nao precisamos usar o no repeat como na div#home-page, pois usamos o 'background-image:'; */
     width: 20px;
+<<<<<<< HEAD
     height: 24px;
+=======
+    height: 20px;
+>>>>>>> master
 }
 #page-home main {
     max-width: 560px;

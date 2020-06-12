@@ -47,11 +47,14 @@ form fieldset {
 
 form legend {
     margin-bottom: 40px;/*vai criar uma separação*/
+<<<<<<< HEAD
     display: flex;
     align-items: center;
     justify-content: space-between;
      
     width: 100%;
+=======
+>>>>>>> master
 
 }
 
@@ -59,11 +62,14 @@ form legend h2 {
     font-size: 24px;/*tamanho*/
 }
 
+<<<<<<< HEAD
 form legend span {
     font-size: 14px;
     color: var(--title-color);
 }
 
+=======
+>>>>>>> master
 form .field {   
     flex: 1; /*para que todos os elementos preencha estique todo espaço flex deve ser colocado o flex 1;*/
     

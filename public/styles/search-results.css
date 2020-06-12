@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     background: white;
 }
@@ -10,6 +11,16 @@ body::after {
     left: 0;
     bottom: 0;
     height: 16rem;
+=======
+body::after {
+    content: "";
+    position: fixed;
+    background: white;
+    top: 260px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+>>>>>>> master
     z-index: -1;
 }
 

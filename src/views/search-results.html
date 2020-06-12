@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends "layout.html" %}
 
 {% set pageId = "page-search-results" %}
@@ -60,3 +61,70 @@
 {% block modal %}{% endblock modal %}
 
 {% block scripts %}{% endblock scripts %}
+=======
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"> <!--Aceita caracter especias como tios e cedilha-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Nossa pagina cabe em telas de diversos tamanhos-->
+    <title>Resultado da pesquisa</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+     <!--Foi adicionado e acoplado uma nova Roboto e a fonte Ubuntu, economizando linhas e chamadas ao site do google, apos o 'E' comercial (&) tem os detalhes -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/search-results.css">
+    <link rel="stylesheet" href="/styles/responsive.css">
+</head>
+<body>
+    <div id="page-search-results">
+
+    
+        
+        <header>
+            <a href="/"><img src="/icones/logo.svg" alt="Logomarca"></a> <!--alt ajuda deficientes visuais , como programas leitores de paginas-->
+            <a href="/">
+                <span></span>
+                Voltar para home
+            </a>
+        </header>
+
+        <main>
+
+            <h4>
+                <strong>2 pontos </strong>encontrados
+                
+            </h4>
+
+            <div class="cards">
+                <div class="card">
+                    <img src="https://images.unsplash.com/flagged/photo-1566843017081-a27f11f2bf05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Colectoria">
+                    <h1>Colectoria</h1>
+                    <h3>Residuos Eletronicos, Lampadas</h3>
+                    <p>
+                        Rio do Sul , Santa Catarina <br/>
+                        Guilherme Gemballa, Jardim América <br/>
+                        Numero 260
+                    </p>
+
+                </div>
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1567393528677-d6adae7d4a0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Colectoria">
+                    <h1>Papersider</h1>
+                    <h3>Papeis e Papelão</h3>
+                    <p>
+                        Rio do Sul , Santa Catarina <br/>
+                        Guilherme Gemballa, Jardim América <br/>
+                        Numero 260
+                    </p>
+
+                </div>
+            </div>
+
+        </main>
+
+
+    </div>
+</body>
+</html>
+>>>>>>> master
