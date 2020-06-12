@@ -68,6 +68,8 @@ document
 
         const itemId = itemLi.dataset.id
 
+        console.log(`ITEM ID : `, itemId) // mostrar no console.log oque é o meu ID
+
         //verificar se exite items selecionados se sim , pegar os items selecionados
 
         
@@ -75,7 +77,7 @@ document
             const itemFound = item == itemId  isso será true ou false
             return itemFound
         })*/
-
+ 
 
 
 
@@ -97,6 +99,8 @@ document
             // se nao estiver selecionado adicionar a seleçõa
             selectedItems.push(itemId)
         }
+
+        console.log(`selectedItems: `, selectedItems) // linha adicionada apos configurar o formulario junto ao bancdo de dados, itens na <li> foi alterado de numerico para texto 
 
          //atualizar os campos escondidos com os items selecionados
             

@@ -44,13 +44,13 @@ db.serialize(() => {  // uma function atrelada aum objto, será considerado meto
 `
 
     const values = [
-        "https://images.unsplash.com/flagged/photo-1566843017081-a27f11f2bf05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
-        "Colectoria",
-        "Guilherme Gembala, Jardim América",
-        "Numero 260",
-        "Santa Catarina",
-        "Rio do Sul",
-        "Residuos Eletronicos e Lampadas"
+        "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=874&q=80",
+        "Clear",
+        "Madureira",
+        "Numero 2525",
+        "Rio de Janeiro",
+        "Rio das Ostras",
+        "Papeis e Papelão,Oleo de Cozinha,Residuos Organicos"
     ]
 
     function afterInsertData(err) {
@@ -82,7 +82,7 @@ db.serialize(() => {  // uma function atrelada aum objto, será considerado meto
 
     // 04 - Deletar um dado da tabela
 
-     /*db.run(`DELETE  FROM places WHERE id = ?`, [12], function (err) {  // por que (1) um ? porque so temos um registro na tabela, dentro da array vai o numero do registro 
+    /* db.run(`DELETE  FROM places WHERE id = ?`, [18], function (err) {  // por que (1) um ? porque so temos um registro na tabela, dentro da array vai o numero do registro 
          if (err) {
              return console.log(err)
          }
@@ -93,16 +93,12 @@ db.serialize(() => {  // uma function atrelada aum objto, será considerado meto
 
     //    consultar registros 
 
-    /* db.all(` SELECT * FROM places`, function (err, rows) {
+   /* db.all(` SELECT * FROM places`, function (err, rows) {
         if (err) {
             return console.log(err)
         }
 
         console.log("Aqui está seus registros")
         console.log(rows)
-    }) */
-
-
+    })*/
 })
-
-

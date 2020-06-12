@@ -92,8 +92,9 @@ server.post("/savepoint", (req, res) => { // metodo post ---  configurando url
 
     function afterInsertData(err) {
         if (err) {
-            console.log(err)
-            return res.send("Erro no Cadastro!")
+            console.log("Ops! Algo deu errado")
+            
+            return res.render("create.point.html", {saved:false })
         }
 
         console.log("cadastrados com Sucesso")

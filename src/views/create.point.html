@@ -135,8 +135,13 @@
 
 {% block modal %}
 
-    {% if saved %}
+    {% if saved === true %}
         {% include "partials/point-created.html"%}
+        
+        {%elseif salved === false%}
+            
+            {% include "partials/err-created.html"%}
+
     {% endif %}
 
 {% endblock modal %}
