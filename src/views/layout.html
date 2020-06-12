@@ -1,38 +1,35 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8"> <!--Aceita caracter especias como tios e cedilha-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Nossa pagina cabe em telas de diversos tamanhos-->
-    
+    <head>
+        <meta charset="UTF-8">
+        <!--Aceita caracter especias como tios e cedilha-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Nossa pagina cabe em telas de diversos tamanhos-->
 
-{% block title %}
-     <title>Ecoleta</title>
-{% endblock title %}
-    
+        {% block title %}
+            <title>Ecoleta</title>
+        {% endblock title %}
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-     <!--Foi adicionado e acoplado uma nova Roboto e a fonte Ubuntu, economizando linhas e chamadas ao site do google, apos o 'E' comercial (&) tem os detalhes -->
-    <link rel="stylesheet" href="/styles/main.css">
-    
-    
-    {% block styles %} 
-    {% endblock styles %} 
-    
-    <link rel="stylesheet" href="/styles/responsive.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+        <!--Foi adicionado e acoplado uma nova Roboto e a fonte Ubuntu, economizando linhas e chamadas ao site do google, apos o 'E' comercial (&) tem os detalhes -->
+        <link rel="stylesheet" href="/styles/main.css">
 
-</head>
-<body>
-    <div id="{{ pageId }}">
-        {% block content %}
-        {% endblock content %}
-    </div>
+        {% block styles %}
+        {% endblock styles %}
 
-    {% block modal %}
-    {% endblock modal %}
- 
-    {% block scripts %}
-    {% endblock scripts %}
-   
-</body>
- 
+        <link rel="stylesheet" href="/styles/responsive.css">
+    </head>
+    <body>
+         <div id="{{ pageId }}">
+            {% block content %}
+            {% endblock content %}
+        </div>
+
+        {% block modal %}
+        {% endblock modal %}
+
+        {% block scripts %}
+        {% endblock scripts %}
+
+    </body>
+    </html>

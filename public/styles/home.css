@@ -35,7 +35,7 @@
     display: flex;
     background-image: url('../icones/log-in.svg'); /* nao precisamos usar o no repeat como na div#home-page, pois usamos o 'background-image:'; */
     width: 20px;
-    height: 20px;
+    height: 24px;
 }
 #page-home main {
     max-width: 560px;

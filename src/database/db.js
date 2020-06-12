@@ -82,7 +82,7 @@ db.serialize(() => {  // uma function atrelada aum objto, será considerado meto
 
     // 04 - Deletar um dado da tabela
 
-    /* db.run(`DELETE  FROM places WHERE id = ?`, [18], function (err) {  // por que (1) um ? porque so temos um registro na tabela, dentro da array vai o numero do registro 
+     /*db.run(`DELETE  FROM places WHERE id = ?`, [20], function (err) {  // por que (1) um ? porque so temos um registro na tabela, dentro da array vai o numero do registro 
          if (err) {
              return console.log(err)
          }
